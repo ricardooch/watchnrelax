@@ -5,7 +5,6 @@ import YoutubeEmbed from "./media/YoutubeEmbed";
 
 const Component = () => {
     const[media, setMedia] = useState(0);
-    const[data, setData] = useState(null);
     const [isActive, setIsActive] = useState(false);
 
     function handleActiveModal() {
