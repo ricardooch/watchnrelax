@@ -1,6 +1,6 @@
 interface media {
     id: number,
-    name: string    
+    name: string
 }
 
 export const mediaList : media[] = [

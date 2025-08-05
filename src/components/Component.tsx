@@ -13,8 +13,8 @@ const Component = () => {
     }
     
     return (
-        <div className="flex justify-center items-center bg-black w-1/2 border border-blue-950">
-            <ComponentsModal isActive={isActive} handleActiveModal={handleActiveModal} setMedia={setMedia} />
+        <div className="relative flex justify-center items-center bg-black w-1/2 border border-blue-950">
+            <ComponentsModal isActive={isActive} handleActiveModal={handleActiveModal} media={media} setMedia={setMedia} />
             {
                 media == 0 ? (
                 <button className="bg-blue-400/50 p-1 rounded-full" onClick={handleActiveModal}>
