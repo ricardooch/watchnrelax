@@ -13,7 +13,8 @@ interface ComponentModalProps {
 function ComponentsModal({ isActive, handleActiveModal, media, setMedia }: ComponentModalProps) {
     const[isActiveSubMenu, setIsActiveSubMenu] = useState(false);
     const[isActiveCountryMenu, setIsActiveCountryMenu] = useState(false);
-    const[camsPerCountry, setCamsPerCountry] = useState<GenericList[]>([])
+    const[uniqueCountries, setUniqueCountries] = useState<string[]>([]);
+    const[camsPerCountry, setCamsPerCountry] = useState<GenericList[]>([]);
 
     function handleSetIsActiveCountryMenu() {
         setIsActiveCountryMenu(!isActiveCountryMenu);
@@ -32,6 +33,7 @@ function ComponentsModal({ isActive, handleActiveModal, media, setMedia }: Compo
 
     function handleSetMedia(id : number) {
         setMedia(id);
+        setUniqueCountries(Array.from(new Set(trafficCamsList.map(cam => cam.name))))
         handleSetIsActiveSubmenu();
         handleActiveModal();
     }
@@ -49,10 +51,15 @@ function ComponentsModal({ isActive, handleActiveModal, media, setMedia }: Compo
         <div className=" absolute bg-gray-400/50 h-2/3 w-2/3 z-50">
             {
                 media == 1 ? (
-                    trafficCamsList.map((trafficCam, index) => (
-                        <button key={index} onClick={() => handleSelectCountry(trafficCam.name)} >{trafficCam.name}</button>
+                    uniqueCountries.map((country, index) => (
+                        <button key={index}>{country}</button>
                     ))
                 ) : (<p>empty</p>)
+                // media == 1 ? (
+                //     trafficCamsList.map((trafficCam, index) => (
+                //         <button key={index} onClick={() => handleSelectCountry(trafficCam.name)} >{trafficCam.name}</button>
+                //     ))
+                // ) : (<p>empty</p>)
             }
         </div>
     )

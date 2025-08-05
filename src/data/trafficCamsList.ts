@@ -19,4 +19,10 @@ export const trafficCamsList : GenericList[] = [
         description: 'Buenos Aires, UBA',
         url: 'rqBfiegG5qU'
     },
+    {
+        id: 4,
+        name: 'USA',
+        description: 'Jackson Hole',
+        url: '1EiC9bvVGnk'
+    },
 ]
