@@ -4,25 +4,25 @@ export const trafficCamsList : GenericList[] = [
     {
         id: 1,
         name: 'Argentina',
-        description: 'Buenos Aires, CABA',
+        description: 'Buenos Aires, UADE Campus',
         url: 'rqBfiegG5qU'
     },
     {
         id: 2,
         name: 'USA',
-        description: 'Fresno, California',
+        description: 'California, Fresno',
         url: 'qMYlpMsWsBE'
     },
     {
         id: 3,
-        name: 'Argentina',
-        description: 'Buenos Aires, UBA',
-        url: 'rqBfiegG5qU'
+        name: 'USA',
+        description: 'Wyoming, Jackson Hole',
+        url: '1EiC9bvVGnk'
     },
     {
         id: 4,
-        name: 'USA',
-        description: 'Jackson Hole',
-        url: '1EiC9bvVGnk'
+        name: 'England',
+        description: 'London, Abbey Road Crossing',
+        url: '57w2gYXjRic'
     },
 ]

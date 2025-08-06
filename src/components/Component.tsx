@@ -2,9 +2,10 @@ import { Plus } from "lucide-react";
 import { useState } from "react";
 import ComponentsModal from "./ComponentsModal";
 import YoutubeEmbed from "./media/YoutubeEmbed";
+import type { media } from "../types";
 
 const Component = () => {
-    const[media, setMedia] = useState(0);
+    const[media, setMedia] = useState<media>({ type: 0, data: ''});
     const [isActive, setIsActive] = useState(false);
 
     function handleActiveModal() {
@@ -14,15 +15,15 @@ const Component = () => {
     
     return (
         <div className="relative flex justify-center items-center bg-black w-1/2 border border-blue-950">
-            <ComponentsModal isActive={isActive} handleActiveModal={handleActiveModal} media={media} setMedia={setMedia} />
+            <ComponentsModal isActive={isActive} handleActiveModal={handleActiveModal} media={media.type} setMedia={setMedia} />
             {
-                media == 0 ? (
+                media.type == 0 ? (
                 <button className="bg-blue-400/50 p-1 rounded-full" onClick={handleActiveModal}>
                     <Plus color="white"/>
                 </button>
                 )
-                : media == 1 ? (
-                    <YoutubeEmbed YoutubeUrl="rqBfiegG5qU" />
+                : media.type == 1 && media.data != '' ? (
+                    <YoutubeEmbed YoutubeUrl={media.data} />
                 )
                 : (
                     <div className="bg-blue-400/50 p-1 rounded-full">

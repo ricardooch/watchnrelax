@@ -4,3 +4,8 @@ export type GenericList = {
     description?: string,
     url: string
 }
+
+export type media = {
+    type : number,
+    data: string
+}
