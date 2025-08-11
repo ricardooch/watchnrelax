@@ -14,7 +14,7 @@ const Component = () => {
     }
     
     return (
-        <div className="relative flex justify-center items-center bg-black w-1/2 border border-blue-950">
+        <div className="relative flex justify-center items-center bg-black w-1/2 border">
             <ComponentsModal isActive={isActive} handleActiveModal={handleActiveModal} media={media.type} setMedia={setMedia} />
             {
                 media.type == 0 ? (

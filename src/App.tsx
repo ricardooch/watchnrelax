@@ -5,8 +5,7 @@ function App() {
 
   return (
     <>
-        <main className="h-screen bg-gradient-to-br from-blue-950 to-[#0e183d]">
-            
+        <main className="h-screen bg-black">
             <section className="flex flex-col h-full w-full">
               <div className="flex w-full h-1/2">
                 <Component />
